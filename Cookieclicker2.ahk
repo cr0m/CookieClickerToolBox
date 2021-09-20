@@ -12,11 +12,12 @@
 ;  F3: Show Counter
 ;  F5: Test
 ;
+
 Gui, New, +AlwaysOnTop
 Gui, Add, Text,x10 y5, F1: Exit
 Gui, Add, Text,x55 y5, F2: CLICK
 Gui, Add, Text,x110 y5, F4: Move to cookie first && start clicking!!!
-Gui, Add, Text,x305 y5, F9: Semi-AutoMatic Game Data Backup (open a 
+Gui, Add, Text,x305 y5, F9: Semi-AutoMatic Game Data Backup (open notepad)
 Gui, Add, Text,x0 y20, -----------------------------------------------------------------------------------------------------
 Gui, Add, Text,x10 y35, DeBug: F3: Show Counter    F5: Test
 Gui, Show, w617 h55, Cookie Clicker Grandma Pimper (CCGP) - Pimping zombie grandmas for max cookies yo
@@ -34,14 +35,12 @@ f9::backupGame()
 global count=0
 
 ; build in quick monitor conditional &|| resolution 
-
 clickIt(){ ; F2
 	Loop {
 		count += 1
 		Click
 		Sleep 5
 	}
-
 }
 
 showCount(){ ; F3
@@ -51,7 +50,6 @@ showCount(){ ; F3
 moveIt(){  ; F4
 	; Main Monitor
 	MouseMove, 300, 420
-
 	clickIt()
 }
 
@@ -68,7 +66,6 @@ test(){  ; F5
 	} else {
 		MsgBox, nope  ; TODO: make this open new one 
 	}
-
 }	
 
 
