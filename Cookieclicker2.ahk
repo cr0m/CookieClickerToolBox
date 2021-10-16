@@ -35,6 +35,7 @@ XButton2::clickIt()
 f3::showCount()
 f4::moveIt()
 f5::test()
+f6::reindeerFarmer()
 f9::backupGame()
 RButton::ExitApp
 
@@ -119,3 +120,24 @@ backupGame(){ ; F9
 	Sleep 5
 	MouseClick
 }
+
+
+reindeerFarmer(){
+
+	Loop
+	{
+		Loop 7
+		{
+			MouseMove, 0, 125, 1, R
+			MouseClick
+		}
+		Loop 7
+		{
+			MouseMove, 0, -125, 1, R
+			MouseClick
+		}	
+	}	
+	
+
+}
+
