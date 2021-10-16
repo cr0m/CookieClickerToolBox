@@ -18,19 +18,26 @@ Gui, Add, Text,x10 y5, F1: Exit
 Gui, Add, Text,x55 y5, F2: CLICK
 Gui, Add, Text,x110 y5, F4: Move to cookie first && start clicking!!!
 Gui, Add, Text,x305 y5, F9: Semi-AutoMatic Game Data Backup (open notepad)
-Gui, Add, Text,x0 y20, -----------------------------------------------------------------------------------------------------
-Gui, Add, Text,x10 y35, DeBug: F3: Show Counter    F5: Test
+Gui, Add, Text,x0 y20, --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Gui, Add, Text,x10 y35, MouseBack: Pause MouseFwd: CLICK DeBug: F3: Show Counter    F5: Test
 Gui, Show, w617 h55, Cookie Clicker Grandma Pimper (CCGP) - Pimping zombie grandmas for max cookies yo
 GuiClose:
 GuiEscape:
 
 F1::ExitApp
 
+
 f2::clickIt()
+
+XButton1::Pause
+XButton2::clickIt()
+
 f3::showCount()
 f4::moveIt()
 f5::test()
 f9::backupGame()
+RButton::ExitApp
+
 
 global count=0
 
